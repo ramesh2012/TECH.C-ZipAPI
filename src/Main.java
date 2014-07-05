@@ -1,6 +1,10 @@
 import http.ServerHttpIF;
 
 import org.apache.http.HttpEntity;
+import org.xmlpull.v1.XmlPullParserException;
+
+import parse.ZipAddressEntityParse;
+import entity.ZipAddressEntity;
 
 public class Main {
 	public static void main(String[] args) {
@@ -15,11 +19,21 @@ public class Main {
 		
 		if(entity != null){
 			// success
-			System.out.println(httpIF.responseText());
-		}else{
-			// fail
-			System.out.println("通信失敗");
+			//System.out.println(httpIF.responseText());
 		}
+		ZipAddressEntity zipAddressEntity = 
+				new ZipAddressEntity();
+		ZipAddressEntityParse zipAddressEntityParse =
+				new ZipAddressEntityParse();
+		try {
+			zipAddressEntity = 
+					(ZipAddressEntity) 
+					zipAddressEntityParse.
+					create(httpIF.responseText());
+		} catch (XmlPullParserException e) {
+			System.out.println("parse miss");
+		}
+		
 		
 		
 	}

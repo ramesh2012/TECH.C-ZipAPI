@@ -25,12 +25,13 @@ public abstract class BaseXmlParse {
 
 	}
 
-	public BaseEntity create() {
-
-		return null;
+	public BaseEntity create(String str) 
+			throws XmlPullParserException {
+		parse(str);
+		return getResponse();
 	}
 
-	public void parse(String str) throws XmlPullParserException {
+	private void parse(String str) throws XmlPullParserException {
 		if (TextUtils.isBlank(str))
 			return;
 
