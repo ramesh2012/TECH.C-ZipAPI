@@ -1,6 +1,6 @@
 package entity;
 
-public class ZipAddressEntity {
+public class ZipAddressEntity extends BaseEntity {
 	private String stateKana;
 	private String cityKana;
 	private String addressKana;

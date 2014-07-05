@@ -2,7 +2,7 @@ package entity;
 
 import java.util.List;
 
-public class ZipEntity {
+public class ZipEntity extends BaseEntity {
 	private String requestZipNum;
 	private String requestZipVersion;
 	private String resultCode;

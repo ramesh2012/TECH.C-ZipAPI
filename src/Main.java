@@ -13,7 +13,14 @@ public class Main {
 		HttpEntity entity = 
 				httpIF.httpGet(accessUrl);
 		
-		System.out.println(httpIF.responseText());
+		if(entity != null){
+			// success
+			System.out.println(httpIF.responseText());
+		}else{
+			// fail
+			System.out.println("通信失敗");
+		}
+		
 		
 	}
 }

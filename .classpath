@@ -9,5 +9,6 @@
 	<classpathentry kind="lib" path="C:/Eclipse/workspace/ZipAPI/lib/httpclient-cache-4.3.4.jar"/>
 	<classpathentry kind="lib" path="C:/Eclipse/workspace/ZipAPI/lib/httpcore-4.3.2.jar"/>
 	<classpathentry kind="lib" path="C:/Eclipse/workspace/ZipAPI/lib/httpmime-4.3.4.jar"/>
+	<classpathentry kind="lib" path="C:/Eclipse/workspace/ZipAPI/lib/xmlpull.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

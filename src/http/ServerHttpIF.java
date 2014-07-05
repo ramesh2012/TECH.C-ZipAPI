@@ -2,6 +2,7 @@ package http;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
@@ -33,6 +34,12 @@ public class ServerHttpIF {
 		try{
 			// server 処理実行
 			response = client.execute(httpGet);
+			
+			if(response.getStatusLine().
+					getStatusCode()
+					!= HttpStatus.SC_OK)
+				return null;
+			
 			return response.getEntity();
 		}catch(Exception e){
 			// noop
