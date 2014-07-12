@@ -27,19 +27,38 @@ extends BaseXmlParse{
 		
 		String cityKana = 
 				parser.getAttributeValue(null,"city_kana");
+		if(!TextUtils.isEmpty(cityKana))
+			_entity.setCityKana(cityKana);
+		
 		String addressKana = 
 				parser.getAttributeValue(null,"address_kana");
+		if(!TextUtils.isEmpty(addressKana))
+			_entity.setAddressKana(addressKana);
+
 		String companyKana = 
 				parser.getAttributeValue(null,"company_kana");
+		if(!TextUtils.isEmpty(companyKana))
+			_entity.setCompanyKana(companyKana);
+		
 		String state = 
 				parser.getAttributeValue(null,"state");
+		if(!TextUtils.isEmpty(state))
+			_entity.setState(state);
+		
 		String city = 
 				parser.getAttributeValue(null,"city");
+		if(!TextUtils.isEmpty(city))
+			_entity.setCity(city);
+		
 		String address = 
 				parser.getAttributeValue(null,"address");
-		String company = 
+		if(!TextUtils.isEmpty(address))
+			_entity.setAddress(address);
+		
+		String company = 			
 				parser.getAttributeValue(null,"company");
-	
+		if(!TextUtils.isEmpty(company))
+			_entity.setCompany(company);
 	}
 
 	@Override
